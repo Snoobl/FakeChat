@@ -1,14 +1,30 @@
 //Only execute code once pages has loaded
 window.onload = function () {
+    const THEONEINPUT = document.getElementById("numPanes");
+    function bindInputs() {
+        const PANECOUNT = THEONEINPUT.value;
+        let formPanes = generatePanes(1, PANECOUNT);
+        let chatFields = generateChatFields(1, PANECOUNT)
+        addPanesToElement(formPanes, "messages");
+        addPanesToElement(chatFields, "chat");
+        init(PANECOUNT);
+    }
+    bindInputs();
 
+    THEONEINPUT.onmouseup = bindInputs;
+    THEONEINPUT.onkeyup = bindInputs;
+
+}
+
+function init(count) {
     //Find inputs on the page
-    const inputChatBoxes = findInputs("chatinput", 3);
-    const inputNameBoxes = findInputs("nameinput", 3);
-    const checkBoxFanPacks = findInputs("check-fanpack", 3);
-    const redRadioButtons = findInputs("team-red", 3);
-    const blueRadioButtons = findInputs("team-blue", 3);
-    const allChats = findInputs("allchat", 3);
-    const teamChats = findInputs("teamchat", 3);
+    const inputChatBoxes = findInputs("chatinput", count);
+    const inputNameBoxes = findInputs("nameinput", count);
+    const checkBoxFanPacks = findInputs("check-fanpack", count);
+    const redRadioButtons = findInputs("team-red", count);
+    const blueRadioButtons = findInputs("team-blue", count);
+    const allChats = findInputs("allchat", count);
+    const teamChats = findInputs("teamchat", count);
     const bgList = [
         "img/bg-1.jpg",
         "img/bg-1.jpg",
@@ -26,8 +42,66 @@ window.onload = function () {
     bindBoxToggles(blueRadioButtons, "name", "red", classToggle, "blue");
     bindChatModeEvents(allChats, "chatmode", "[ALL] ", "[TEAM] ");
     bindChatModeEvents(teamChats, "chatmode", "[TEAM] ", "[ALL] ");
-    bgSelect();
+    bgSelect(bgList);
+}
 
+function addPanesToElement(panes, elementID) {
+    let baseElement = document.getElementById(elementID);
+    baseElement.innerHTML = "";
+    panes.forEach((pane) => {
+        baseElement.innerHTML += pane;
+    });
+}
+function generatePanes(startNum, count) {
+    let formPanes = [];
+    for (let i = startNum; i <= count; i++) {
+        let formPane = `<div class="col-md-3">
+			<form>
+				<h3>Message ${i}</h3>
+				<hr>
+				<b>Name</b>
+				<br/>
+				<input type="text" name="name" id="nameinput${i}" value="">
+				<br/>
+				<b>Team</b>
+				<br/>
+				<input type="radio" name="team" id="team-blue${i}" value="blue" checked>
+				<label for="team-blue${i}" class="blue"> Blue</label>&nbsp;
+				<input type="radio" name="team" id="team-red${i}" value="red">
+				<label for="team-red${i}" class="red"> Red</label>
+				<br/>
+				<b>Chatmode</b>
+				<br/>
+				<input type='radio' name="chatmode1" id='allchat${i}' checked/>
+				<label for="allchat${i}"> ALL</label>&nbsp;
+				<input type='radio' name="chatmode1" id='teamchat${i}' />
+				<label for="teamchat${i}"> TEAM</label>
+				<br/>
+				<input type="checkbox" name="fanpack" id="check-fanpack${i}" value="fanpack">&nbsp;
+				<img class="fanpack" src="img/fanpack.png">
+				<label for="check-fanpack${i}">&nbsp;Ultimate Fanpack</label>
+				<br>
+				<b>Message</b>
+				<input type="text" name="message" class="chatinput" id="chatinput${i}">
+				<br>
+			</form>
+        </div>`;
+        formPanes.push(formPane);
+    }
+    return formPanes;
+}
+
+function generateChatFields(startNum, count) {
+    let chatFields = [];
+    for (let i = startNum; i <= count; i++) {
+        let chatField = `<span class="default" id="chatmode${i}">[ALL] </span>
+                        <span class="blue" id="name${i}">Player${i}</span>
+                        <span class="default">: </span>
+                        <span class="default" id="chatmessage${i}">im magician...lol</span>
+                        <br/>`;
+        chatFields.push(chatField);
+    }
+    return chatFields;
 }
 
 // of an input to find, and how many to find. So in the format chatinput1, id is
@@ -76,7 +150,7 @@ function classToggle(input, className, next) {
     );
 }
 //Add event onto bgselector
-function bgSelect() {
+function bgSelect(bgList) {
     document
         .getElementById("bg-select")
         .onchange = () => {
