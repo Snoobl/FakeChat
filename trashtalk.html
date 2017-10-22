@@ -13,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
-	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 
@@ -23,102 +22,13 @@
 		<img id="logo" src="img/logo.png" height="50">
 		<h1 class="system">Battlerite TrashTalk</h1>
 		<br/>
+		<input type="number" id="numPanes" value="3" min="1" max="8" />
+		<div class="messages" id="messages">
 
-		<div class="col-md-3">
-			<div class="messages">
-				<form>
-					<h3>Message 1</h3>
-					<hr>
-					<b>Name</b>
-					<br/>
-					<input type="text" name="name" id="nameinput1" value="">
-					<br/>
-					<b>Team</b>
-					<br/>
-					<input type="radio" name="team" id="team-blue1" value="blue" checked>
-					<label for="team1-blue" class="blue"> Blue</label>&nbsp;
-					<input type="radio" name="team" id="team-red1" value="red">
-					<label for="team1-red" class="red"> Red</label>
-					<br/>
-					<b>Chatmode</b>
-					<br/>
-					<input type='radio' name="chatmode1" id='allchat1' checked/>
-					<label for="allchat1"> ALL</label>&nbsp;
-					<input type='radio' name="chatmode1" id='teamchat1' />
-					<label for="teamchat1"> TEAM</label>
-					<br/>
-					<input type="checkbox" name="fanpack" id="check-fanpack1" value="fanpack">&nbsp;
-					<img class="fanpack" src="img/fanpack.png">
-					<label for="check1-fanpack">&nbsp;Ultimate Fanpack</label>
-					<br>
-					<b>Message</b>
-					<input type="text" name="message" class="chatinput" id="chatinput1">
-					<br>
-				</form>
-			</div>
+
+
 		</div>
-		<div class="col-md-3">
-			<form>
-				<h3>Message 2</h3>
-				<hr>
-				<b>Name</b>
-				<br/>
-				<input type="text" name="name" id="nameinput2">
-				<br>
-				<b>Team</b>
-				<br/>
-				<input type="radio" name="team" id="team-blue2" value="blue">
-				<label for="team2-blue" class="blue"> Blue</label>&nbsp;
-				<input type="radio" name="team" id="team-red2" value="red" checked>
-				<label for="team2-red" class="red"> Red</label>
-				<br/>
-				<b>Chatmode</b>
-				<br/>
-				<input type='radio' name="chatmode1" id='allchat2' checked/>
-				<label for="allchat2"> ALL</label>&nbsp;
-				<input type='radio' name="chatmode1" id='teamchat2' />
-				<label for="teamchat2"> TEAM</label>
-				<br/>
-				<input type="checkbox" name="fanpack" id="check-fanpack2" value="fanpack">&nbsp;
-				<img class="fanpack" src="img/fanpack.png">
-				<label for="check2-fanpack">&nbsp;Ultimate Fanpack</label>
-				<br>
-				<b>Message</b>
-				<input type="text" name="message" class="chatinput" id="chatinput2">
-				<br>
-			</form>
-		</div>
-		<div class="col-md-3">
-			<form>
-				<h3>Message 3</h3>
-				<hr>
-				<b>Name</b>
-				<br/>
-				<input type="text" name="name" id="nameinput3">
-				<br>
-				<b>Team</b>
-				<br/>
-				<input type="radio" name="team" id="team-blue3" value="blue" checked>
-				<label for="team3-blue" class="blue"> Blue</label>&nbsp;
-				<input type="radio" name="team" id="team-red3" value="red">
-				<label for="team3-red" class="red"> Red</label>
-				<br/>
-				<b>Chatmode</b>
-				<br/>
-				<input type='radio' name="chatmode1" id='allchat3' checked/>
-				<label for="allchat3"> ALL</label>&nbsp;
-				<input type='radio' name="chatmode1" id='teamchat3' />
-				<label for="teamchat3"> TEAM</label>
-				<br/>
-				<input type="checkbox" name="fanpack" id="check-fanpack3" value="fanpack">&nbsp;
-				<img class="fanpack" src="img/fanpack.png">
-				<label for="check3-fanpack">&nbsp;Ultimate Fanpack</label>
-				<br>
-				<b>Message</b>
-				<input type="text" name="message" class="chatinput" id="chatinput3">
-				<br>
-			</form>
-		</div>
+
 		<div class="col-md-3">
 			<form action="">
 				<h3>Background</h3>
@@ -136,24 +46,8 @@
 		<div class="col-md-12 col-sm-12">
 			<h3>Output</h3>
 			<img id="bg" src="img/bg-1.jpg" />
-			<div class="chat">
-				<span class="default" id="chatmode1">[ALL] </span>
-				<span class="blue" id="name1">Player1</span>
-				<span class="default">: </span>
-				<span class="default" id="chatmessage1">im magician...lol</span>
-				<br/>
+			<div class="chat" id="chat">
 
-				<span class="default" id="chatmode2">[ALL] </span>
-				<span class="red" id="name2">Player2</span>
-				<span class="default">: </span>
-				<span class="default" id="chatmessage2">mouse 1</span>
-				<br/>
-
-				<span class="default" id="chatmode3">[ALL] </span>
-				<span class="blue" id="name3">Player1</span>
-				<span class="default">: </span>
-				<span class="default" id="chatmessage3">rely?</span>
-				<br/>
 			</div>
 		</div>
 
