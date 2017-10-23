@@ -31,7 +31,32 @@ function init(count) {
         "img/bg-2.jpg",
         "img/bg-3.jpg",
         "img/bg-4.jpg",
-        "img/bg-5.jpg"
+        "img/bg-5.jpg",
+		"img/bg-6.jpg",
+		"img/bg-7.jpg",
+        "img/bg-8.jpg",
+        "img/bg-9.jpg",
+        "img/bg-10.jpg",
+        "img/bg-11.jpg",
+        "img/bg-12.jpg",
+		"img/bg-13.jpg",
+		"img/bg-14.jpg",
+        "img/bg-15.jpg",
+        "img/bg-16.jpg",
+        "img/bg-17.jpg",
+        "img/bg-18.jpg",
+        "img/bg-19.jpg",
+		"img/bg-20.jpg",
+		"img/bg-21.jpg",
+        "img/bg-22.jpg",
+        "img/bg-23.jpg",
+        "img/bg-24.jpg",
+        "img/bg-25.jpg",
+        "img/bg-26.jpg",
+		"img/bg-27.jpg",
+		"img/bg-28.jpg",
+        "img/bg-29.jpg",
+        "img/bg-30.jpg"
     ];
 
     //Bind events to found inputs
@@ -57,31 +82,31 @@ function generatePanes(startNum, count) {
     for (let i = startNum; i <= count; i++) {
         let formPane = `<div class="col-md-3">
 			<form>
-				<h3>Message ${i}</h3>
-				<hr>
-				<b>Name</b>
-				<br/>
+				<h2><i class="fa fa-comment" aria-hidden="true"></i> ${i}</h2>
+				Name
+				<br>
 				<input type="text" name="name" id="nameinput${i}" value="">
-				<br/>
-				<b>Team</b>
-				<br/>
+				<br>
+				<br>
+				Team
+				<br>
 				<input type="radio" name="team" id="team-blue${i}" value="blue" checked>
 				<label for="team-blue${i}" class="blue"> Blue</label>&nbsp;
 				<input type="radio" name="team" id="team-red${i}" value="red">
 				<label for="team-red${i}" class="red"> Red</label>
-				<br/>
-				<b>Chatmode</b>
-				<br/>
+				<br>
+				Chatmode
+				<br>
 				<input type='radio' name="chatmode1" id='allchat${i}' checked/>
 				<label for="allchat${i}"> ALL</label>&nbsp;
 				<input type='radio' name="chatmode1" id='teamchat${i}' />
 				<label for="teamchat${i}"> TEAM</label>
-				<br/>
+				<br>
 				<input type="checkbox" name="fanpack" id="check-fanpack${i}" value="fanpack">&nbsp;
 				<img class="fanpack" src="img/fanpack.png">
 				<label for="check-fanpack${i}">&nbsp;Ultimate Fanpack</label>
 				<br>
-				<b>Message</b>
+				Message
 				<input type="text" name="message" class="chatinput" id="chatinput${i}">
 				<br>
 			</form>
@@ -98,7 +123,7 @@ function generateChatFields(startNum, count) {
                         <span class="blue" id="name${i}">Player${i}</span>
                         <span class="default">: </span>
                         <span class="default" id="chatmessage${i}">im magician...lol</span>
-                        <br/>`;
+                        <br>`;
         chatFields.push(chatField);
     }
     return chatFields;

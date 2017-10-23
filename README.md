@@ -1,2 +1,0 @@
-# FakeChat
-# Readme file

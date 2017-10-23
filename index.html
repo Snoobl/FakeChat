@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Battlerite TrashTalk</title>
+	<meta name="description" content="Create fake Battlerite chat messages">
+	<meta name="author" content="SNooBL">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<script src="https://use.fontawesome.com/22bc0b2a73.js"></script>
+	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<div class="content container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="intro"><img id="logo" src="img/logo.png" height="50">&nbsp; TrashTalk</h1>
+		</div>
+		<br>
+		<div class="col-md-3">
+			<form>
+				<h3><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></h3>
+				<p>Create chat messages that look like they're coming from <a href="http://store.steampowered.com/app/504370/Battlerite/" target="_blank">Battlerite</a></p>
+			</form>
+		</div>
+		<div class="col-md-3">
+			<form>
+				<h3><i class="fa fa-map fa-2x" aria-hidden="true"></i></h3>
+				<select id="bg-select">
+					<option value="1" selected>Mount Araz 1</option>
+					<option value="2">Mount Araz 2</option>
+					<option value="3">Mount Araz 3</option>
+					<option value="4">Mount Araz 4</option>
+					<option value="5">Mount Araz 5</option>
+					<option value="6">Orman Temple 1</option>
+					<option value="7">Orman Temple 2</option>
+					<option value="8">Orman Temple 3</option>
+					<option value="9">Orman Temple 4</option>
+					<option value="10">Orman Temple 5</option>
+					<option value="11">Sky Ring 1</option>
+					<option value="12">Sky Ring 2</option>
+					<option value="13">Sky Ring 3</option>
+					<option value="14">Sky Ring 4</option>
+					<option value="15">Sky Ring 5</option>
+					<option value="16">Blackstone Night 1</option>
+					<option value="17">Blackstone Night 2</option>
+					<option value="18">Blackstone Night 3</option>
+					<option value="19">Blackstone Night 4</option>
+					<option value="20">Blackstone Night 5</option>
+					<option value="21">Blackstone Day 1</option>
+					<option value="22">Blackstone Day 2</option>
+					<option value="23">Blackstone Day 3</option>
+					<option value="24">Blackstone Day 4</option>
+					<option value="25">Blackstone Day 5</option>
+					<option value="26">Dragon Garden 1</option>
+					<option value="27">Dragon Garden 2</option>
+					<option value="28">Dragon Garden 3</option>
+					<option value="29">Dragon Garden 4</option>
+					<option value="30">Dragon Garden 5</option>
+				</select>
+			</form>
+		</div>
+		<div class="col-md-3">
+			<form>
+				<h3><i class="fa fa-commenting fa-2x" aria-hidden="true"></i></h3>
+				<input type="number" id="numPanes" value="3" min="1" max="8" />
+			</form>
+		</div>
+		<div class="col-md-3">
+			&nbsp;
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="messages" id="messages"></div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<h3><i class="fa fa-star" aria-hidden="true"></i> Output</h3>
+			<img id="bg" src="img/bg-1.jpg" />
+			<div class="chat" id="chat">
+
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- END content -->
+	<footer class="footer">
+		<div class="col-md-12 col-sm-12">
+			<div id="by">
+				<p>Made by
+					<a href="https://twitter.com/Snoobl" target="_blank">@snoobl</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

@@ -5,13 +5,35 @@ html, body {
 	height:100%;
 	max-width:100%;
 	flow-x: hidden;
+	overflow-x: hidden;
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	color:#b9b9b9;
-	background-color:#0f0f0f;
+	color:#9bb2c7; /*#b9b9b9*/
+	background-color:#08010d;
 	display:flex;
 	flex-direction:column;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+	color:#9bb2c7;
+	font-weight:800;
+}
+h2 {
+	text-shadow: 3px 3px #000;
+}
+h3 {
+	color:#e0ba48;
+	text-shadow: 3px 3px #000;
+}
+::selection {
+  background: #0d0a0c; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #0d0a0c; /* Gecko Browsers */
 }
 .content {
 	flex: 1 0 auto;
@@ -22,12 +44,12 @@ body {
 a, a:visited {
 	color:#e0ba48;
 }
-h3 {
-	color:#abded4;
-}
 #logo {
-	float:left;
-	margin:15px;
+}
+.intro{
+	color:#e0ba48;
+	text-shadow: 3px 3px #000;
+	margin:20px;
 }
 .default {
 	color:#dedec5;
@@ -56,11 +78,16 @@ h3 {
 	height:260px;
 	width:450px;
 }
-.messages {
-	padding:;
+#bg-select {
+	background-color:#0e1e2e;
+	color:#9bb2c7;
+	border:0px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	padding:5px 10px;
 }
 .chat {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: 600;
 	text-shadow: 2px 2px #0f0f0f;
 	max-width:430px;
@@ -70,19 +97,33 @@ h3 {
     position:absolute;
 }
 form {
-	background-color:#333;
-	padding:1px 20px 20px 20px;
+	background-image: linear-gradient(#013047, #1d2c3d);
+	padding:10px;
+	margin-top:10px;
+	text-align:center;
+	min-height:140px;
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
 }
-input {
-	width:;
+#numPanes {
+	font-size:25px;
+	background-color:#0e1e2e;
+	border:0px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
 }
 input[type="text"] {
 	padding:5px 10px;
-	background-color:#888;
-	color:#000;
+	background-color:#0e1e2e;
+	color:#9bb2c7;
+	border:0px;
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	text-align:center;
 }
 .chatinput {
-	width:100%;
+	width:116%;
+	margin-left:-8%;
 }
 #by {
 	text-align:center;
